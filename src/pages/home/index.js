@@ -64,6 +64,7 @@ const Index = ({
           displayPrice={displayPrice}
           maxSupply={maxSupply}
           chainId={chainId}
+          loadWeb3={loadWeb3}
         />
         <StorySection />
         <SliderSection />

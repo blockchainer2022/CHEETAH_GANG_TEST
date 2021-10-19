@@ -11,6 +11,7 @@ const Index = ({
   mint,
   maxSupply,
   chainId,
+  loadWeb3,
 }) => {
   const [value, setValue] = useState(0);
 
@@ -53,7 +54,7 @@ const Index = ({
                 <MintBox msg={"Please Connect To Mainnet"} />
               )
             ) : (
-              <MintBox />
+              <MintBox connect={true} loadWeb3={loadWeb3} />
             )}
           </div>
           <div className="col-xl-6" data-aos="fade-up">
@@ -120,7 +121,7 @@ const Timer = () => (
   </div>
 );
 
-const MintBox = ({ msg = "Connect" }) => (
+const MintBox = ({ msg = "Connect", connect, loadWeb3 }) => (
   <div className="mint-now-box">
     <div className="mint-header">
       <div className="mint-header-text">
@@ -134,9 +135,18 @@ const MintBox = ({ msg = "Connect" }) => (
       </div>
     </div>
     <div className="mint-box-body text-center py-0">
-      <button className="btn btn-outline-light btn-lg my-5 rounded-pill mint-btn py-3 px-5">
-        {msg}
-      </button>
+      {connect ? (
+        <button
+          className="btn btn-outline-light btn-lg my-5 rounded-pill mint-btn py-3 px-5"
+          onClick={loadWeb3}
+        >
+          {msg}
+        </button>
+      ) : (
+        <button className="btn btn-outline-light btn-lg my-5 rounded-pill mint-btn py-3 px-5">
+          {msg}
+        </button>
+      )}
     </div>
   </div>
 );
