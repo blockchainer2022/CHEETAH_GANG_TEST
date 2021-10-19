@@ -62,11 +62,14 @@ const Index = ({
               <ul className="list-unstyled number-list mb-0">
                 <li>
                   <img className="mr-2" src={Check} alt="cheak" />
-                  Mint Cost : <strong>{displayPrice} ETH + GAS</strong>
+                  Mint Cost :{" "}
+                  <strong>
+                    {displayPrice ? displayPrice : "0.07"} ETH + GAS
+                  </strong>
                 </li>
                 <li>
                   <img className="mr-2" src={Check} alt="cheak" />
-                  Max Supply : <strong>{maxSupply}</strong>
+                  Max Supply : <strong>10,000</strong>
                 </li>
                 <li>
                   <img className="mr-2" src={Check} alt="cheak" />
