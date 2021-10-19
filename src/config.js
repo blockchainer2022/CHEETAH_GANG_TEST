@@ -287,6 +287,24 @@ export const contractAbi = [
     type: "function",
   },
   {
+    inputs: [
+      { internalType: "uint256", name: "_max_allowed_limit", type: "uint256" },
+    ],
+    name: "setMaxAllowed",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "uint256", name: "_owner_reserved", type: "uint256" },
+    ],
+    name: "setOwnerReserved",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "uint256", name: "_newPrice", type: "uint256" }],
     name: "setPrice",
     outputs: [],
@@ -392,6 +410,5 @@ export const contractAbi = [
     type: "function",
   },
 ];
-
 // export const contractAddress = "0xBe10903776Fc7293b88bD2C037e9572692495c52";
-export const contractAddress = "0x1B347dd0A339Dd36161Aca6BB93b89e172cF106F";
+export const contractAddress = "0x45cC39E739928501641BD8E052Ab52b56BF1c25b";
