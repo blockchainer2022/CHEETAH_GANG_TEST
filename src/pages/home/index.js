@@ -26,7 +26,7 @@ const Index = ({
   chainId,
 }) => {
   const difference =
-    +new moment(Date.UTC("2021", "09", "19", "06", "30", "00")).utc() -
+    +new moment(Date.UTC("2021", "09", "19", "06", "23", "00")).utc() -
     +new Date();
 
   const [days, setDays] = useState(0);
